@@ -1,0 +1,5 @@
+
+
+.sz-btn {
+  @apply hover: text-shadow-xl hover: shadow-lg;
+}
