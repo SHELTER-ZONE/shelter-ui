@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper" :class="{ dark: theme === '🌙 Dark' }">
-    <section class="flex justify-between items-center px-2">
+    <section class="flex justify-between items-center">
       <span class="text-4xl">SHELTER ZONE - UI Components</span>
       <SZButton
         @click="theme === '🌕 Light' ? (theme = '🌙 Dark') : (theme = '🌕 Light')"
@@ -8,29 +8,55 @@
       >
     </section>
 
-    <section>
-      <p class="pl-2 text-xl">Button</p>
-      <SZButton>Normal</SZButton>
-      <SZButton type="primary">Primary</SZButton>
-      <SZButton type="warning">Warning</SZButton>
-      <SZButton type="danger">Danger</SZButton>
-    </section>
-
-    <section>
-      <p class="pl-2 text-xl">Input</p>
-      <div class="py-3">
-        <SZFileInputVue content="Upload Image" />
-        <SZDirectoryInputVue />
+    <section class="flex flex-col gap-3">
+      <p class="text-xl bg-gray-400 text-white px-2 mb-3">Button</p>
+      <div class="flex gap-3">
+        <span>Normal</span>
+        <SZButton>Normal</SZButton>
+        <SZButton type="primary">Primary</SZButton>
+        <SZButton type="warning">Warning</SZButton>
+        <SZButton type="danger">Danger</SZButton>
+      </div>
+      <div class="flex gap-3">
+        <span>Outline</span>
+        <SZButton outline>Normal</SZButton>
+        <SZButton type="primary" outline>Primary</SZButton>
+        <SZButton type="warning" outline>Warning</SZButton>
+        <SZButton type="danger" outline>Danger</SZButton>
+      </div>
+      <div class="flex gap-3">
+        <span>Dashed</span>
+        <SZButton dashed>Normal</SZButton>
+        <SZButton type="primary" dashed>Primary</SZButton>
+        <SZButton type="warning" dashed>Warning</SZButton>
+        <SZButton type="danger" dashed>Danger</SZButton>
       </div>
     </section>
+
+    <section class="flex flex-col gap-3">
+      <p class="text-xl bg-gray-400 text-white px-2 mb-3">Upload</p>
+      <div class="py-3 flex">
+        <SZFileInputVue content="Upload Image" />
+        <SZFileInputVue dashed content="Upload Image" />
+      </div>
+      <div class="flex gap-3">
+        <SZDirectoryInputVue content="Upload Directory"/>
+      </div>
+      <div class="flex gap-3">
+        <SZFileDrop class="w-full h-50" @droped="getFiles"/>
+        <div>{{files}}</div>
+      </div>
+    </section>
+
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, ref } from "vue"
 import SZButton from "./components/button/SZButton.vue"
-import SZFileInputVue from "./components/input/SZFileInput.vue"
-import SZDirectoryInputVue from "./components/input/SZDirectoryInput.vue"
+import SZFileInputVue from "./components/upload/SZFileInput.vue"
+import SZDirectoryInputVue from "./components/upload/SZDirectoryInput.vue"
+import SZFileDrop from "./components/upload/SZFileDrop.vue"
 
 export default defineComponent({
   name: "App",
@@ -38,12 +64,17 @@ export default defineComponent({
     SZButton,
     SZFileInputVue,
     SZDirectoryInputVue,
+    SZFileDrop,
   },
 
   setup() {
     const theme = ref<string>("🌙 Dark")
+    const files = ref<string>('')
+    const getFiles = (data: any) => {
+      files.value = data
+    }
 
-    return { theme }
+    return { theme, getFiles, files }
   },
 })
 </script>

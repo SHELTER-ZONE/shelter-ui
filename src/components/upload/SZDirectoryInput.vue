@@ -19,13 +19,17 @@ export default defineComponent({
 </script>
 
 <style scoped lang="postcss">
-
 .sz-directory-input {
   @apply cursor-pointer;
   @apply m-2  px-3 py-1 border-2 border-solid border-teal-400 rounded-md;
   @apply text-teal-400;
 }
+
 .input-hide {
   display: none;
+}
+
+.dashed {
+  @apply border-dashed;
 }
 </style>
