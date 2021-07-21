@@ -3,8 +3,3 @@
 .sz-btn {
   @apply hover: text-shadow-xl hover: shadow-lg;
 }
-
-.primary {
-  @apply border-teal-400 bg-teal-400 text-gray-600;
-  @apply hover: bg-teal-400 hover: text-gray-600;
-}

@@ -1,16 +1,15 @@
 <template>
-<div class="sz-file-drop relative" 
-  @drop.prevent="dropHandle"  
-  @dragenter.prevent="onEnter = true"
-  @dragover.prevent="onOver = true"
-  @dragleave.prevent="onEnter = false, onOver = false"
-  
->
-  <label class="input-label" :class="{highlight : onEnter || onOver}">
-    <span>{{content}}</span>
-    <input class="input-hide" type="file" />
-  </label>
-</div>
+  <div class="sz-file-drop relative" 
+    @drop.prevent="dropHandle"  
+    @dragenter.prevent="onEnter = true"
+    @dragover.prevent="onOver = true"
+    @dragleave.prevent="onEnter = false, onOver = false"
+  >
+    <label class="input-label" :class="{highlight : onEnter || onOver}">
+      <span>{{content}}</span>
+      <input class="input-hide" type="file" />
+    </label>
+  </div>
 </template>
 
 <script lang="ts">
@@ -70,6 +69,11 @@ export default defineComponent({
 </script>
 
 <style scoped lang="postcss">
+.sz-file-drop {
+  width: 100%;
+  height: 200px;
+}
+
 .input-label {
   @apply cursor-pointer;
   @apply absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center;

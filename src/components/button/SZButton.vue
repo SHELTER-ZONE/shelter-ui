@@ -1,5 +1,11 @@
 <template>
-  <button class="sz-btn" :class="[type, {'outline' : outline}, {'dashed': dashed}]">
+  <button class="sz-btn" :class="[
+    {'outline' : outline}, 
+    {'dashed': dashed}, 
+    {'plain': plain}, 
+    type,
+    ]"
+  >
     <slot />
   </button>
 </template>
@@ -22,6 +28,11 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+
+    plain: {
+      type: Boolean,
+      default: false,
+    },
   }
 })
 </script>
@@ -37,18 +48,18 @@ export default defineComponent({
 }
 
 .primary {
-  @apply border-teal-400 bg-teal-400 text-gray-600;
-  @apply hover: bg-teal-400 hover: text-gray-600;
+  @apply border-teal-400 bg-teal-400;
+  @apply hover: bg-teal-400;
 }
 
 .warning {
-  @apply border-yellow-400 bg-yellow-400  text-gray-600;
-  @apply hover: bg-yellow-400 hover: text-gray-600;
+  @apply border-yellow-400 bg-yellow-400;
+  @apply hover: bg-yellow-400;
 }
 
 .danger {
-  @apply border-rose-400 bg-rose-400 text-gray-600;
-  @apply hover: bg-rose-400 hover: text-gray-600;
+  @apply border-rose-400 bg-rose-400;
+  @apply hover: bg-rose-400;
 }
 
 
@@ -58,5 +69,9 @@ export default defineComponent({
 
 .outline {
   @apply bg-transparent;
+}
+
+.plain {
+  @apply bg-transparent hover: bg-transparent;
 }
 </style>

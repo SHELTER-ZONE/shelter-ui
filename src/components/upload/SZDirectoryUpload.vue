@@ -21,7 +21,7 @@ export default defineComponent({
 <style scoped lang="postcss">
 .sz-directory-input {
   @apply cursor-pointer;
-  @apply m-2  px-3 py-1 border-2 border-solid border-teal-400 rounded-md;
+  @apply px-3 py-1 border-2 border-solid border-teal-400 rounded-md;
   @apply text-teal-400;
 }
 

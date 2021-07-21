@@ -1,6 +1,6 @@
 import SZButton from "./components/button/SZButton.vue"
-import SZFileInputVue from "./components/upload/SZFileInput.vue"
-import SZDirectoryInputVue from "./components/upload/SZDirectoryInput.vue"
+import SZFileInputVue from "./components/upload/SZFileUpload.vue"
+import SZDirectoryInputVue from "./components/upload/SZDirectoryUpload.vue"
 import SZFileDrop from "./components/upload/SZFileDrop.vue"
 import { App } from "vue"
 

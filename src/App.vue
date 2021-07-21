@@ -10,21 +10,21 @@
 
     <section class="flex flex-col gap-3">
       <p class="text-xl bg-gray-400 text-white px-2 mb-3">Button</p>
-      <div class="flex gap-3">
+      <div class="container">
         <span>Normal</span>
         <SZButton>Normal</SZButton>
         <SZButton type="primary">Primary</SZButton>
         <SZButton type="warning">Warning</SZButton>
         <SZButton type="danger">Danger</SZButton>
       </div>
-      <div class="flex gap-3">
+      <div class="container">
         <span>Outline</span>
         <SZButton outline>Normal</SZButton>
         <SZButton type="primary" outline>Primary</SZButton>
         <SZButton type="warning" outline>Warning</SZButton>
         <SZButton type="danger" outline>Danger</SZButton>
       </div>
-      <div class="flex gap-3">
+      <div class="container">
         <span>Dashed</span>
         <SZButton dashed>Normal</SZButton>
         <SZButton type="primary" dashed>Primary</SZButton>
@@ -35,15 +35,17 @@
 
     <section class="flex flex-col gap-3">
       <p class="text-xl bg-gray-400 text-white px-2 mb-3">Upload</p>
-      <div class="py-3 flex">
+      <div class="py-3 container">
+        <span>File</span>
         <SZFileInputVue content="Upload Image" />
         <SZFileInputVue dashed content="Upload Image" />
       </div>
-      <div class="flex gap-3">
+      <div class="container">
+        <span>Directory</span>
         <SZDirectoryInputVue content="Upload Directory"/>
       </div>
-      <div class="flex gap-3">
-        <SZFileDrop class="w-full h-50" @droped="getFiles"/>
+      <div class="container">
+        <SZFileDrop class="test" @droped="getFiles"/>
         <div>{{files}}</div>
       </div>
     </section>
@@ -54,8 +56,8 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue"
 import SZButton from "./components/button/SZButton.vue"
-import SZFileInputVue from "./components/upload/SZFileInput.vue"
-import SZDirectoryInputVue from "./components/upload/SZDirectoryInput.vue"
+import SZFileInputVue from "./components/upload/SZFileUpload.vue"
+import SZDirectoryInputVue from "./components/upload/SZDirectoryUpload.vue"
 import SZFileDrop from "./components/upload/SZFileDrop.vue"
 
 export default defineComponent({
@@ -99,4 +101,9 @@ html, body, #app {
 section {
   @apply mb-5;
 }
+
+.container {
+  @apply flex gap-3 items-center;
+}
+
 </style>
