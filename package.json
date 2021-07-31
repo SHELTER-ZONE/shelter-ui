@@ -1,6 +1,6 @@
 {
-  "name": "sz-ui",
-  "version": "0.1.13",
+  "name": "shelter-zone-ui",
+  "version": "0.1.0",
   "author": "Proladon",
   "description": "Just testing createing lib with Vite.",
   "sideEffects": false,
