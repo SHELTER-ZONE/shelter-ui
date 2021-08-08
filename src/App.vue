@@ -50,6 +50,19 @@
       </div>
     </section>
 
+    <section class="flex flex-col gap-3">
+      <p class="text-xl bg-gray-400 text-white px-2 mb-3">Select</p>
+      <div class="py-3 container">
+        <SZSelect />
+      
+      </div>
+    </section>
+
+
+    <SZBadge data="105+" type="danger">
+      <SZButton outline type="primary" class="border border-teal-400 rounded-lg px-15 py-1">TEST</SZButton>
+    </SZBadge>
+
   </div>
 </template>
 
@@ -59,6 +72,8 @@ import SZButton from "./components/button/SZButton.vue"
 import SZFileInputVue from "./components/upload/SZFileUpload.vue"
 import SZDirectoryInputVue from "./components/upload/SZDirectoryUpload.vue"
 import SZFileDrop from "./components/upload/SZFileDrop.vue"
+import SZSelect from "./components/select/SZSelect.vue"
+import SZBadge from "./components/badge/SZBadge.vue"
 
 export default defineComponent({
   name: "App",
@@ -67,6 +82,8 @@ export default defineComponent({
     SZFileInputVue,
     SZDirectoryInputVue,
     SZFileDrop,
+    SZSelect,
+    SZBadge,
   },
 
   setup() {

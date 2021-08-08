@@ -1,14 +1,16 @@
-import SZButton from "./components/button/SZButton.vue"
-import SZFileInputVue from "./components/upload/SZFileUpload.vue"
-import SZDirectoryInputVue from "./components/upload/SZDirectoryUpload.vue"
+import SZFileInput from "./components/upload/SZFileUpload.vue"
 import SZFileDrop from "./components/upload/SZFileDrop.vue"
+import SZDirectoryInput from "./components/upload/SZDirectoryUpload.vue"
+import SZButton from "./components/button/SZButton.vue"
+import SZBadge from "./components/badge/SZBadge.vue"
 import { App } from "vue"
 
 const components = {
   SZButton,
-  SZFileInputVue,
-  SZDirectoryInputVue,
+  SZFileInput,
+  SZDirectoryInput,
   SZFileDrop,
+  SZBadge,
 }
 
 function install(Vue: App) {
@@ -20,4 +22,4 @@ function install(Vue: App) {
 
 export default { install }
 
-export { SZButton, SZFileInputVue, SZDirectoryInputVue, SZFileDrop }
+export { SZButton, SZFileInput, SZDirectoryInput, SZFileDrop, SZBadge }

@@ -41,25 +41,25 @@ export default defineComponent({
 @import url('../../styles/global.css');
 .sz-btn {
   transition: 0.3s;
-  @apply cursor-pointer select-none outline-none ;
+  @apply cursor-pointer select-none outline-none text-shadow-lg;
   @apply p-2 text-center text-xl border-2 border-solid rounded-md ;
-  @apply border-gray-400 bg-gray-400 text-gray-600;
-  @apply hover: bg-gray-400 hover: text-gray-600;
+  @apply border-normal bg-normal text-gray-600;
+  @apply hover: bg-normal hover: text-gray-600;
 }
 
 .primary {
-  @apply border-teal-400 bg-teal-400;
-  @apply hover: bg-teal-400;
+  @apply border-primary bg-primary;
+  @apply hover: bg-primary;
 }
 
 .warning {
-  @apply border-yellow-400 bg-yellow-400;
-  @apply hover: bg-yellow-400;
+  @apply border-warning bg-warning;
+  @apply hover: bg-warning;
 }
 
 .danger {
-  @apply border-rose-400 bg-rose-400;
-  @apply hover: bg-rose-400;
+  @apply border-danger bg-danger;
+  @apply hover: bg-danger;
 }
 
 

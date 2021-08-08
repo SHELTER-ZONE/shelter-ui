@@ -1,6 +1,6 @@
 {
   "name": "shelter-zone-ui",
-  "version": "0.1.0",
+  "version": "0.1.6",
   "author": "Proladon",
   "description": "Just testing createing lib with Vite.",
   "sideEffects": false,
@@ -8,12 +8,12 @@
     "dist",
     "src"
   ],
-  "main": "./dist/sz-btn.umd.js",
-  "module": "./dist/sz-btn.es.js",
+  "main": "./dist/shelter-zone-ui.umd.js",
+  "module": "./dist/shelter-zone-ui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/sz-btn.es.js",
-      "require": "./dist/sz-btn.umd.js"
+      "import": "./dist/shelter-zone-ui.es.js",
+      "require": "./dist/shelter-zone-ui.umd.js"
     },
     "./dist/style.css" : "./dist/style.css"
   },

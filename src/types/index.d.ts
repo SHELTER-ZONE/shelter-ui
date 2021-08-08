@@ -1,1 +1,1 @@
-declare module 'sz-ui'
+declare module 'shelter-zone-ui'
