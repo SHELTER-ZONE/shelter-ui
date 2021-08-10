@@ -3,3 +3,8 @@
 .sz-btn {
   @apply hover: text-shadow-xl hover: shadow-lg;
 }
+
+.disabled {
+  @apply pointer-events-none cursor-not-allowed;
+  filter: brightness(0.7) grayscale(0.7);
+}

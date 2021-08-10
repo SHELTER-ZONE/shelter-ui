@@ -3,6 +3,7 @@
     {'outline' : outline}, 
     {'dashed': dashed}, 
     {'plain': plain}, 
+    {'disabled': disabled}, 
     type,
     ]"
   >
@@ -17,6 +18,11 @@ export default defineComponent({
   props: {
     type: {
       type: String,
+    },
+
+    disabled: {
+      type: Boolean,
+      default: false,
     },
 
     dashed: {
@@ -61,7 +67,6 @@ export default defineComponent({
   @apply border-danger bg-danger;
   @apply hover: bg-danger;
 }
-
 
 .dashed {
   @apply border-dashed bg-transparent;

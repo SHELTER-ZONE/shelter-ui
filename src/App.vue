@@ -13,9 +13,13 @@
       <div class="container">
         <span>Normal</span>
         <SZButton>Normal</SZButton>
+        <SZButton disabled>Disabled</SZButton>
         <SZButton type="primary">Primary</SZButton>
+        <SZButton disabled type="primary">Primary</SZButton>
         <SZButton type="warning">Warning</SZButton>
+        <SZButton disabled type="warning">Warning</SZButton>
         <SZButton type="danger">Danger</SZButton>
+        <SZButton disabled type="danger">Warning</SZButton>
       </div>
       <div class="container">
         <span>Outline</span>
