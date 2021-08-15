@@ -41,15 +41,15 @@
       <p class="text-xl bg-gray-400 text-white px-2 mb-3">Upload</p>
       <div class="py-3 container">
         <span>File</span>
-        <SZFileInputVue content="Upload Image" />
-        <SZFileInputVue dashed content="Upload Image" />
+        <SZFileUpload content="Upload Image" />
+        <SZFileUpload dashed content="Upload Image" />
       </div>
       <div class="container">
         <span>Directory</span>
-        <SZDirectoryInputVue content="Upload Directory"/>
+        <SZDirectoryUpload content="Upload Directory"/>
       </div>
       <div class="container">
-        <SZFileDrop class="test" @droped="getFiles"/>
+        <SZDropUpload class="test" @droped="getFiles"/>
         <div>{{files}}</div>
       </div>
     </section>
@@ -73,9 +73,9 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue"
 import SZButton from "./components/button/SZButton.vue"
-import SZFileInputVue from "./components/upload/SZFileUpload.vue"
-import SZDirectoryInputVue from "./components/upload/SZDirectoryUpload.vue"
-import SZFileDrop from "./components/upload/SZFileDrop.vue"
+import SZFileUpload from "./components/upload/SZFileUpload.vue"
+import SZDirectoryUpload from "./components/upload/SZDirectoryUpload.vue"
+import SZDropUpload from "./components/upload/SZDropUpload.vue"
 import SZSelect from "./components/select/SZSelect.vue"
 import SZBadge from "./components/badge/SZBadge.vue"
 
@@ -83,9 +83,9 @@ export default defineComponent({
   name: "App",
   components: {
     SZButton,
-    SZFileInputVue,
-    SZDirectoryInputVue,
-    SZFileDrop,
+    SZFileUpload,
+    SZDirectoryUpload,
+    SZDropUpload,
     SZSelect,
     SZBadge,
   },

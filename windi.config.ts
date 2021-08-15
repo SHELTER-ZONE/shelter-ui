@@ -8,7 +8,7 @@ export default defineConfig({
         primary : '#43D5BF',
         warning: '#F7BE2B',
         danger: '#F66E85',
-      }
+      },
     }
   }
 })

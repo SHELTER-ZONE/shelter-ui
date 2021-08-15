@@ -46,9 +46,8 @@ export default defineComponent({
 <style lang="postcss" scoped>
 @import url('../../styles/global.css');
 .sz-btn {
-  transition: 0.3s;
   @apply cursor-pointer select-none outline-none text-shadow-lg;
-  @apply p-2 text-center text-xl border-2 border-solid rounded-md ;
+  @apply p-2 text-center text-xl border border-solid rounded-md ;
   @apply border-normal bg-normal text-gray-600;
   @apply hover: bg-normal hover: text-gray-600;
 }
