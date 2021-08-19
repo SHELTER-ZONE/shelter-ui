@@ -1,5 +1,3 @@
-
-
 .sz-btn, .sz-directory-input {
   @apply hover: text-shadow-xl hover: shadow-lg;
   transition: ease-in-out .3s;

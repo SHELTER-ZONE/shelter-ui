@@ -7,7 +7,7 @@
     type,
     ]"
   >
-    <slot />
+  <slot />
   </button>
 </template>
 
@@ -45,34 +45,35 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 @import url('../../styles/global.css');
+
 .sz-btn {
-  @apply cursor-pointer select-none outline-none text-shadow-lg;
-  @apply p-2 text-center text-xl border border-solid rounded-md ;
-  @apply border-normal bg-normal text-gray-600;
-  @apply hover: bg-normal hover: text-gray-600;
+  @apply cursor-pointer select-none outline-none text-shadow-md;
+  @apply px-6 py-3 text-center text-xl border border-solid rounded-md ;
+  @apply border-normal bg-normal text-gray-100;
+  @apply hover: bg-normal hover: bg-opacity-20 hover: text-gray-200;
 }
 
 .primary {
   @apply border-primary bg-primary;
-  @apply hover: bg-primary;
+  @apply hover: bg-primary hover: bg-opacity-20 hover: text-gray-200;
 }
 
 .warning {
   @apply border-warning bg-warning;
-  @apply hover: bg-warning;
+  @apply hover: bg-warning hover: bg-opacity-20 hover: text-gray-200;
 }
 
 .danger {
   @apply border-danger bg-danger;
-  @apply hover: bg-danger;
+  @apply hover: bg-danger hover: bg-opacity-20 hover: text-gray-200;
 }
 
 .dashed {
-  @apply border-dashed bg-transparent;
+  @apply border-dashed bg-transparent text-gray-400;;
 }
 
 .outline {
-  @apply bg-transparent;
+  @apply bg-transparent text-gray-400;
 }
 
 .plain {
