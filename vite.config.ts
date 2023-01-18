@@ -1,33 +1,13 @@
-import { defineConfig } from "vite"
-import WindiCSS from "vite-plugin-windicss"
-import vue from "@vitejs/plugin-vue"
-const path = require("path")
+import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), WindiCSS()],
+  plugins: [vue()],
   resolve: {
-    alias: [
-      {
-        find: "@",
-        replacement: path.resolve(__dirname, "src"),
-      },
-    ],
-  },
-
-  build: {
-    lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
-      name: "sz-btn",
-    },
-
-    rollupOptions: {
-      external: ["vue"],
-      output: {
-        globals: {
-          vue: "Vue",
-        },
-      },
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 })

@@ -1,25 +1,18 @@
-import SZFileUpload from "./components/upload/SZFileUpload.vue"
-import SZDropUpload from "./components/upload/SZDropUpload.vue"
-import SZDirectoryUpload from "./components/upload/SZDirectoryUpload.vue"
-import SZButton from "./components/button/SZButton.vue"
-import SZBadge from "./components/badge/SZBadge.vue"
-import { App } from "vue"
+/* eslint-disable */
+import { App as Application, Plugin } from 'vue'
+import * as components from './components/index'
+import { setVueInstance } from './utils/config/index'
 
-const components = {
-  SZButton,
-  SZFileUpload,
-  SZDirectoryUpload,
-  SZDropUpload,
-  SZBadge,
-}
-
-function install(Vue: App) {
-  for (const component in components) {
-    // @ts-expect-error
-    Vue.component(components[component].name, components[component])
+const install: Exclude<Plugin['install'], undefined> = (
+  instance: Application,
+) => {
+  setVueInstance(instance)
+  for (const componentKey in components) {
+    instance.use((components as any)[componentKey])
   }
 }
 
-export default { install }
+export default install
 
-export { SZButton, SZFileUpload, SZDirectoryUpload, SZDropUpload, SZBadge }
+export * from './components'
+export * from './utilities'

@@ -1,54 +1,18 @@
-<p align="center" style="font-size: 24px;">
-<strong> SHELTER-ZONE UI </strong>
-</p>
-<hr>
-<p align="center">
-Vue 3 components library
-</p>
+# Vue 3 + TypeScript + Vite
 
-## Installation
-```py
-# with npm
-$ npm install shelter-zone-ui
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-# with yarn
-$ yarn add shelter-zone-ui
-```
+## Recommended IDE Setup
 
-## Getting Start
-### By All components
-```ts
-// in main.js / main.ts
-import { createApp } from 'vue'
-import App from './App.vue'
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-import SZUI from 'shelter-zone-ui' // <- import SZUI
-import 'shelter-zone-ui/dist/style.css' // <- import SZUI styles
+## Type Support For `.vue` Imports in TS
 
-const Vue = createApp(App)
-Vue.use(SZUI) // <- use SZUI
-Vue.mount("#app")
-```
-And then free to use anywhere in .vue component.
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
----
-### By Individual import
-```html
-<!--in xxx.vue component file--> 
-<template>
-    <SZButton>Button</SZButton>
-</template>
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-<script>
-import { defineComponent } from 'vue'
-
-import { SZButton } from 'shelter-zone-ui' // <- import individual component
-import 'shelter-zone-ui/dist/style.css' // <- import styles
-
-export default defineComponent({
-  name: "App",
-  components: {
-    SZButton, // <- use component
-  },
-</script>
-```
+1. Disable the built-in TypeScript Extension
+   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
