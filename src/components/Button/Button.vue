@@ -1,5 +1,5 @@
 <template>
-  <button @click="click">button</button>
+  <button class="sz-button" @click="click">button</button>
 </template>
 
 <script setup>
@@ -8,4 +8,8 @@ const click = () => {
 }
 </script>
 
-<style scoped lang="postcss"></style>
+<style scoped lang="postcss">
+.sz-button {
+  @apply bg-teal-400 text-gray-700;
+}
+</style>
