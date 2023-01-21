@@ -6,7 +6,16 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), WindiCSS()],
+  plugins: [
+    vue(),
+    WindiCSS({
+      scan: {
+        dirs: ['.'], // all files in the cwd
+        fileExtensions: ['vue', 'js', 'ts'], // also enabled scanning for js/ts
+      },
+      config: path.resolve(__dirname, 'windi.config.ts'),
+    }),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
