@@ -1,3 +1,1 @@
-import Button from './Button'
-
-export { Button }
+export { default as SZButton } from './Button/Button.vue'

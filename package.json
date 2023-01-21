@@ -1,8 +1,18 @@
 {
   "name": "@shelter-zone/shelter-ui",
-  "private": true,
   "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/shelter-ui.umd.js",
+  "module": "./dist/shelter-ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/shelter-ui.es.js",
+      "require": "./dist/shelter-ui.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
