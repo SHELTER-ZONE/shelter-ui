@@ -13,7 +13,7 @@ export default defineConfig({
       },
 
       borderRadius: {
-        base: '8px',
+        base: '6px',
       },
     },
   },

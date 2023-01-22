@@ -1,0 +1,4 @@
+.hover-animtion {
+  @apply hover:(transform translate-y-[-5px]);
+  @apply transition ease-in-out duration-300;
+}
