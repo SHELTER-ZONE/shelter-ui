@@ -12,6 +12,7 @@ defineProps({
 
 <style scoped lang="postcss">
 .block-container {
+  @apply flex flex-col;
   @apply bg-[rgba(0,0,0,0.3)] rounded-base p-[20px] shadow-xl text-base;
 }
 </style>
