@@ -6,30 +6,28 @@
         {{ title }}
       </h3>
     </div>
-    <p class="font-semibold overflow-hidden mb-6 flex-1">{{ description }}</p>
-    <div class="tag-container">
-      <div class="tag">
-        <p>🔰 tag name</p>
-      </div>
-      <div class="tag">
-        <p>🔰 tag name</p>
-      </div>
-      <div class="tag">
-        <p>🔰 tag name</p>
-      </div>
-      <div class="tag">
-        <p>🔰 tag name</p>
-      </div>
+    <p class="text-lg font-semibold overflow-hidden mb-6 flex-1">{{ description }}</p>
+    <div>
+      <n-scrollbar x-scrollable>
+        <div class="tag-container">
+          <div v-for="tag in tags" class="tag">
+            <p>{{ tag.icon }} {{ tag.name }}</p>
+          </div>
+        </div>
+      </n-scrollbar>
     </div>
   </SZBlockContainer>
 </template>
 
 <script setup lang="ts">
+import { NScrollbar } from "naive-ui";
+
 import { SZBlockContainer } from "@/components";
 
 defineProps({
   title: String,
   description: String,
+  tags: [Object],
 });
 </script>
 
@@ -44,24 +42,12 @@ defineProps({
 }
 
 .tag-container {
-  @apply flex truncate pb-3;
-
-  overflow-x: scroll;
-}
-
-.tag-container::-webkit-scrollbar {
-  height: 3px;
-  background: transparent;
-}
-
-.tag-container::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: #6B7280;
+  @apply flex truncate pb-5;
 }
 
 .tag {
-  @apply bg-base border-1 border-base rounded-xl;
-  @apply px-4 mr-4 last:mr-0;
+  @apply bg-base border-1 border-base rounded-4xl;
+  @apply px-6 py-1 mr-4 last:mr-0;
 }
 
 .tag p {
