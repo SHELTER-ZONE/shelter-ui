@@ -1,12 +1,14 @@
 <template>
   <SZBlockContainer>
     <div class="flex mb-4">
-      <img src="images/placeholder.png" />
+      <img src="@/assets/images/placeholder.png" />
       <h3 class="title">
         {{ title }}
       </h3>
     </div>
-    <p class="text-lg font-semibold overflow-hidden mb-6 flex-1">{{ description }}</p>
+    <p class="text-lg font-semibold overflow-hidden mb-6 flex-1">
+      {{ description }}
+    </p>
     <div>
       <n-scrollbar x-scrollable>
         <div class="tag-container">
@@ -20,15 +22,15 @@
 </template>
 
 <script setup lang="ts">
-import { NScrollbar } from "naive-ui";
+import { NScrollbar } from 'naive-ui'
 
-import { SZBlockContainer } from "@/components";
+import { SZBlockContainer } from '@/components'
 
 defineProps({
   title: String,
   description: String,
   tags: [Object],
-});
+})
 </script>
 
 <style scoped lang="postcss">
