@@ -3,7 +3,7 @@
     <main class="grid gap-[40px]">
       <div class="flex flex-col gap-[20px]">
         <SZBlockContainer hoverAnimtion> cascs </SZBlockContainer>
-        <SZBlockContainer> cascs </SZBlockContainer>
+        <SZBlockContainer title="this is title"> cascs </SZBlockContainer>
       </div>
       <div class="flex flex-col gap-[20px]">
         <SZHighLightContainer hoverAnimtion color="#2EABFF">
@@ -47,20 +47,20 @@
 </template>
 
 <script setup lang="ts">
-import { NConfigProvider, GlobalThemeOverrides } from "naive-ui";
+import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
 
 import {
   SZBlockContainer,
   SZHighLightContainer,
   SZDiscussionBlock,
-} from "@/components";
+} from '@/components'
 
 const themeOverrides: GlobalThemeOverrides = {
   Scrollbar: {
-    color: "#6B7280",
-    colorHover: "#6B7280",
+    color: '#6B7280',
+    colorHover: '#6B7280',
   },
-};
+}
 </script>
 
 <style lang="postcss">
