@@ -1,7 +1,7 @@
 <template>
   <div class="sz-block-container" :class="{ 'hover-animtion': hoverAnimtion }">
     <slot name="title">
-      <p class="block-container-title">{{ title }}</p>
+      <p v-if="title" class="block-container-title">{{ title }}</p>
     </slot>
     <slot />
   </div>
