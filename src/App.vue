@@ -6,18 +6,9 @@
         <SZBlockContainer title="this is title"> cascs </SZBlockContainer>
       </div>
       <div class="flex flex-col gap-[20px]">
-        <SZHighLightContainer hoverAnimtion color="#2EABFF">
-          #2EABFF
-        </SZHighLightContainer>
-        <SZHighLightContainer hoverAnimtion>
-          #2BFFC4 (Default)
-        </SZHighLightContainer>
-        <SZHighLightContainer
-          hoverAnimtion
-          color="#EFF542"
-          lightWidth="15"
-          lightPosition="right"
-        >
+        <SZHighLightContainer hoverAnimtion color="#2EABFF"> #2EABFF </SZHighLightContainer>
+        <SZHighLightContainer hoverAnimtion> #2BFFC4 (Default) </SZHighLightContainer>
+        <SZHighLightContainer hoverAnimtion color="#EFF542" lightWidth="15" lightPosition="right">
           #EFF542
         </SZHighLightContainer>
       </div>
@@ -33,7 +24,7 @@
             { icon: '🔰', name: 'tag' },
             { icon: '🔰', name: 'tag' },
             { icon: '🔰', name: 'tag' },
-            { icon: '🔰', name: 'tag' },
+            { icon: '🔰', name: 'tag' }
           ]"
         />
         <SZDiscussionBlock
@@ -49,17 +40,13 @@
 <script setup lang="ts">
 import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
 
-import {
-  SZBlockContainer,
-  SZHighLightContainer,
-  SZDiscussionBlock,
-} from '@/components'
+import { SZBlockContainer, SZHighLightContainer, SZDiscussionBlock } from '@/components'
 
 const themeOverrides: GlobalThemeOverrides = {
   Scrollbar: {
     color: '#6B7280',
-    colorHover: '#6B7280',
-  },
+    colorHover: '#6B7280'
+  }
 }
 </script>
 
