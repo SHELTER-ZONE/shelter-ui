@@ -1,1 +1,2 @@
-export { default as SZBlockContainer, type SZBlockContainerProps } from './SZBlockContainer.vue'
+export { default as SZBlockContainer } from './SZBlockContainer.vue'
+export type { SZBlockContainerProps } from './types'

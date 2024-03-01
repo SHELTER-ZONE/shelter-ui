@@ -1,6 +1,6 @@
 <template>
   <n-config-provider :theme-overrides="themeOverrides">
-    <main class="grid gap-[40px]">
+    <main class="grid gap-[40px] p-[30px]">
       <div class="flex flex-col gap-[20px]">
         <SZBlockContainer hoverAnimtion> cascs </SZBlockContainer>
         <SZBlockContainer title="this is title"> cascs </SZBlockContainer>
@@ -26,12 +26,7 @@ const themeOverrides: GlobalThemeOverrides = {
 html,
 body,
 #app {
-  @apply h-full w-full;
-  @apply bg-primary-bg;
-}
-
-#app {
-  @apply px-12 lg:px-42 py-12;
+  @apply h-full w-full m-0;
+  /* @apply bg-primary-bg; */
 }
 </style>
-@/index @/index

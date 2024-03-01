@@ -8,18 +8,19 @@
 </template>
 
 <script setup lang="ts">
-export interface SZBlockContainerProps {
-  hoverAnimtion?: boolean
-  title?: string
-}
+import type { SZBlockContainerProps } from './types'
 
-defineProps<SZBlockContainerProps>()
+withDefaults(defineProps<SZBlockContainerProps>(), {
+  hoverAnimtion: false,
+  bg: 'rgba(0,0,0,0.3)',
+  padding: 20
+})
 </script>
 
 <style scoped lang="postcss">
 .sz-block-container {
   @apply flex flex-col;
-  @apply bg-[rgba(0,0,0,0.3)] rounded-base p-[20px] shadow-xl text-base;
+  @apply rounded-base shadow-xl text-base;
 }
 
 .block-container-title {
