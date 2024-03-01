@@ -1,6 +1,6 @@
 .sz-block-container {
     @apply flex flex-col;
-    @apply shadow-xl text-base;
+    @apply shadow-xl;
     @apply bg-[var(--sz-bg-primary)] rounded-[var(--sz-rounded-normal)];
     @apply p-[20px];
     @apply text-[var(--sz-core-fontBaseColor)];
