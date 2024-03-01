@@ -14,7 +14,7 @@
 import type { SZBlockContainerProps } from './types'
 
 withDefaults(defineProps<SZBlockContainerProps>(), {
-  hoverAnimtion: true
+  hoverAnimtion: false
 })
 </script>
 

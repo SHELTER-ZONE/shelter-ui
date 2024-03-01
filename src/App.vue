@@ -9,9 +9,26 @@
           voluptatum nobis ex? Voluptatum, maxime non.
         </SZBlockContainer>
       </div>
-    </main>
 
-    <SZEditableArea> cascs </SZEditableArea>
+      <div>
+        <div class="flex gap-20px">
+          <SZEditableArea>
+            <SZBlockContainer title="this is title">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quam et in autem
+              quia asperiores molestiae tempora animi, dolores soluta pariatur, hic libero
+              dignissimos voluptatum nobis ex? Voluptatum, maxime non.
+            </SZBlockContainer>
+          </SZEditableArea>
+          <SZEditableArea hide-edit>
+            <SZBlockContainer title="this is title">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quam et in autem
+              quia asperiores molestiae tempora animi, dolores soluta pariatur, hic libero
+              dignissimos voluptatum nobis ex? Voluptatum, maxime non.
+            </SZBlockContainer>
+          </SZEditableArea>
+        </div>
+      </div>
+    </main>
   </n-config-provider>
 </template>
 
