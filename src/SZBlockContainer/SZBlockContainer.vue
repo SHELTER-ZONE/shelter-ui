@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-interface SZBlockContainerProps {
+export interface SZBlockContainerProps {
   hoverAnimtion?: boolean
   title?: string
 }

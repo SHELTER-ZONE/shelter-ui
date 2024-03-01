@@ -7,7 +7,15 @@ import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), UnoCSS(), dts()],
+  plugins: [
+    vue(),
+    UnoCSS(),
+    dts({
+      tsconfigPath: 'tsconfig.build.json',
+      cleanVueFileName: true,
+      exclude: ['src/test/**']
+    })
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
@@ -15,7 +23,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/components/index.ts'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'shelter-ui',
       fileName: (format) => `shelter-ui.${format}.js`
     },
