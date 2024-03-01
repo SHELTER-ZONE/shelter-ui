@@ -1276,6 +1276,11 @@
   resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.58.0.tgz#661592965eaf616692a3d5c91644248bed8c173d"
   integrity sha512-UVZ5kz37JGbwAA06k/gjKYcekcTwi6oIhev1EpTtCvHLL6XYcYqcwb/u4Wjzprd3L3lxDGYXvGdjREGm2u7vbQ==
 
+"@unocss/reset@^0.58.5":
+  version "0.58.5"
+  resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.58.5.tgz#2284efdd7adbd01e07905337727557b77a2e9114"
+  integrity sha512-2wMrkCj3SSb5hrx9TKs5jZa34QIRkHv9FotbJutAPo7o8hx+XXn56ogzdoUrcFPJZJUx2R2nyOVbSlGMIjtFtw==
+
 "@unocss/rule-utils@0.58.0":
   version "0.58.0"
   resolved "https://registry.yarnpkg.com/@unocss/rule-utils/-/rule-utils-0.58.0.tgz#2cb3144d4ebc86f3fc0e284e3df6464ec79021ea"
@@ -2963,6 +2968,13 @@ magic-string@^0.30.5:
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.15"
 
+magic-string@^0.30.7:
+  version "0.30.7"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.7.tgz#0cecd0527d473298679da95a2d7aeb8c64048505"
+  integrity sha512-8vBuFF/I/+OSLRmdf2wwFCJCz+nSn0m6DPvGH1fS/KiQoSaR+sETbov0eIk9KhEKy8CYqIkIAnbohxT/4H0kuA==
+  dependencies:
+    "@jridgewell/sourcemap-codec" "^1.4.15"
+
 mark.js@8.11.1:
   version "8.11.1"
   resolved "https://registry.yarnpkg.com/mark.js/-/mark.js-8.11.1.tgz#180f1f9ebef8b0e638e4166ad52db879beb2ffc5"
@@ -4023,6 +4035,14 @@ vite-plugin-dts@^3.6.4:
     debug "^4.3.4"
     kolorist "^1.8.0"
     vue-tsc "^1.8.20"
+
+vite-plugin-lib-inject-css@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-lib-inject-css/-/vite-plugin-lib-inject-css-2.0.0.tgz#ea70a03c6fceabf4ed9f252c06e8313ed3e9730c"
+  integrity sha512-5RK9eP2biW340FEbpI8eHZQfeqIz0+Glbkk4U1fZ1QKOvyaYy5K6TmW43KuhmGLizk2Vd4Nv7OwGpxq2wXclyQ==
+  dependencies:
+    magic-string "^0.30.7"
+    picocolors "^1.0.0"
 
 vite@^5.0.10:
   version "5.0.10"

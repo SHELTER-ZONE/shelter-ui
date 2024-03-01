@@ -1,0 +1,18 @@
+.sz-block-container {
+    @apply flex flex-col;
+    @apply shadow-xl text-base;
+    @apply bg-[var(--sz-bg-primary)] rounded-[var(--sz-rounded-normal)];
+    @apply p-[20px];
+    @apply text-[var(--sz-core-fontBaseColor)];
+}
+
+.sz-block-container-title {
+    @apply text-center font-medium;
+    @apply mb-[var(--sz-gap-lv3)];
+    font-size: var(--sz-font-lg);
+}
+
+.sz-block-container-body {
+    @apply text-justify;
+    font-size: var(--sz-font-normal);
+}
