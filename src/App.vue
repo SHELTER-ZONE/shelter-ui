@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
 
-import { SZBlockContainer } from '@/components'
+import { SZBlockContainer } from '../lib'
 
 const themeOverrides: GlobalThemeOverrides = {
   Scrollbar: {

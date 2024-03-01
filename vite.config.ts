@@ -4,6 +4,7 @@ import UnoCSS from 'unocss/vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import dts from 'vite-plugin-dts'
+import { glob } from 'glob'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -18,12 +19,12 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./lib', import.meta.url))
     }
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(__dirname, 'lib/index.ts'),
       name: 'shelter-ui',
       fileName: (format) => `shelter-ui.${format}.js`
     },

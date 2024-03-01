@@ -1,19 +1,27 @@
 {
-    "extends": "@vue/tsconfig/tsconfig.dom.json",
-    "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.json"],
-    "exclude": ["src/**/__tests__/*", "dist"],
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "ESNext",
-      "strict": true,
-      "composite": true,
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "baseUrl": ".",
-      "paths": {
-        "@/*": ["./src/*"]
-      },
-      "outDir": "dist"
-    }
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "src/**/*.json",
+    "lib/**/*",
+    "lib/**/*.vue",
+    "lib/**/*.json"
+  ],
+  "exclude": ["src/**/__tests__/*", "dist"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "composite": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "outDir": "dist"
   }
+}
