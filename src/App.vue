@@ -53,6 +53,11 @@
             <div class="text-[var(--sz-core-fontBaseColor)] p-20px">SHELTER ZONE</div>
           </SZTargetArea>
         </SZStatusMask>
+        <SZStatusMask status="error" :show="false">
+          <SZTargetArea class="w-fit">
+            <div class="text-[var(--sz-core-fontBaseColor)] p-20px">SHELTER ZONE</div>
+          </SZTargetArea>
+        </SZStatusMask>
       </div>
     </main>
   </n-config-provider>

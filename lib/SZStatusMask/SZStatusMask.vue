@@ -1,6 +1,6 @@
 <template>
   <div class="sz-status-mask">
-    <div class="overlay overlay-mask"></div>
+    <div class="overlay overlay-mask" v-if="show"></div>
     <div v-if="show" class="overlay overlay-content">
       <slot name="icon" v-if="status !== 'disabled'">
         <Icon :size="iconSize" :color="iconProps.color">
@@ -14,7 +14,7 @@
         </p>
       </slot>
     </div>
-    <div class="status-mask-wrapper">
+    <div class="status-mask-wrapper" :class="{ 'status-mask-wrapper-show': show }">
       <slot />
     </div>
   </div>
@@ -64,7 +64,7 @@ const iconProps = computed(() => {
   z-index: 1;
 }
 
-.status-mask-wrapper {
+.status-mask-wrapper-show {
   @apply opacity-30;
 }
 </style>
