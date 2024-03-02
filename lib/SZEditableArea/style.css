@@ -1,0 +1,33 @@
+.sz-editable-block {
+    @apply relative rounded-[var(--sz-rounded-normal)];
+    @apply border-[var(--sz-core-fontBaseColor)] border-1 border-solid;
+    @apply ease-in-out transition-all duration-300;
+    @apply overflow-hidden;
+}
+
+.sz-editable-block-mask {
+    @apply absolute top-0 left-0 bottom-0 right-0;
+    @apply select-none pointer-events-none;
+    @apply ease-in-out transition-all duration-500;
+    @apply bg-transparent;
+    z-index: 1;
+}
+
+.sz-editable-block-mask-show {
+    background-color: rgba(0, 0, 0, 0.25);
+
+
+}
+
+.edit-btn {
+    @apply absolute top-0 right-0;
+    @apply bg-[var(--sz-core-fontBaseColor)] hover:(opacity-80);
+    @apply px-[10px] py-[5px];
+    @apply rounded-bl-[var(--sz-rounded-normal)] rounded-tr-[var(--sz-rounded-normal)];
+    @apply ease-in-out transition-all duration-300;
+    z-index: 2;
+}
+
+.hide {
+    @apply border-transparent;
+}

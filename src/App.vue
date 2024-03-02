@@ -28,13 +28,25 @@
           </SZEditableArea>
         </div>
       </div>
+
+      <div>
+        <SZTargetArea class="w-fit">
+          <div class="text-[var(--sz-core-fontBaseColor)] p-20px">SHELTER ZONE</div>
+        </SZTargetArea>
+      </div>
     </main>
   </n-config-provider>
 </template>
 
 <script setup lang="ts">
 import { NConfigProvider, GlobalThemeOverrides } from 'naive-ui'
-import { SZBlockContainer, shelterTheme, SZEditableArea, ShelterZoneTheme } from '../lib'
+import {
+  SZBlockContainer,
+  shelterTheme,
+  SZEditableArea,
+  ShelterZoneTheme,
+  SZTargetArea
+} from '../lib'
 
 const themeOverrides: GlobalThemeOverrides = {
   Scrollbar: {
@@ -52,5 +64,6 @@ body,
 #app {
   @apply h-full w-full m-0;
   background: #282828;
+  font-family: 'Quicksand', 'Noto Sans TC', sans-serif;
 }
 </style>
