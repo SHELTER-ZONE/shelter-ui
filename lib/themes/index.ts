@@ -8,7 +8,8 @@ export const UIVarGroupConfig = {
   background: 'bg',
   fontSize: 'font',
   rounded: 'rounded',
-  gap: 'gap'
+  gap: 'gap',
+  status: 'status'
 }
 
 export const setCssVar = (name: string, value: string) => {

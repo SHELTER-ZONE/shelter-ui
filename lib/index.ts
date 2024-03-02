@@ -1,4 +1,5 @@
 export * from './SZBlockContainer'
 export * from './SZEditableArea'
 export * from './SZTargetArea'
+export * from './SZStatusMask'
 export * from './themes'

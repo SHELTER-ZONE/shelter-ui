@@ -45,4 +45,12 @@ export interface SZUIThemeConfig {
     lv9: string // 40px
     lv10: string // 60px
   }
+
+  status: {
+    success: string
+    error: string
+    warning: string
+    action: string
+    info: string
+  }
 }

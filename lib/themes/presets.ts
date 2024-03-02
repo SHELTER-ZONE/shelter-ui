@@ -49,6 +49,8 @@ export const ShelterZoneTheme: SZUIThemeConfig = {
   status: {
     error: '#ec3c5c',
     warning: '#f2c97d',
-    action: '#70C0E8'
+    action: '#70C0E8',
+    success: '#4de997',
+    info: '#636363'
   }
 }
